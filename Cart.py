@@ -1,6 +1,4 @@
 
-from this import d
-
 
 class Cart:
     
