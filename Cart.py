@@ -11,6 +11,8 @@ class Cart:
 
     @classmethod
     def tambah_product(cls, nama_product, jumlah):
+        """ Menambah product dan jumlah ke dalam cart """
+
         key_product = nama_product.lower().replace(' ', '_')
         if not cls.cart.get(key_product):
             cls.cart[key_product] = {
@@ -22,6 +24,7 @@ class Cart:
 
     @classmethod
     def hapus_product(cls, kode_product):
+        """ Menghapus product dari dalam cart """
 
         key_product = kode_product.lower().replace(' ', '_')
         try:
@@ -32,12 +35,10 @@ class Cart:
     
     @classmethod
     def tampilkan_cart(cls):
+        """ Menampilkan isi cart """
+
         for item in cls.cart:
             print (cls.cart.get(item))
-    
-    @classmethod
-    def get_cart(cls):
-        return cls.cart['pisang_hijau']
 
 
 if __name__ == '__main__':
