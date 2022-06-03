@@ -1,3 +1,5 @@
+Task:
+
 Data Structure - Shopping Cart
 Buat sebuah Software Library Shopping Cart yang harus memilik fungsi:
 
@@ -42,23 +44,3 @@ Apel Merah (7)
     #         product_in_cart = cls.cart[key_product]['jumlah'] - jumlah
     #         if product_in_cart < 0:
     #             cls.cart[key_product]['jumlah'] = 0
-
-def test_hapus_product_mock(self):
-        TestCase.Cart.cart = Mock(return_value={'pisang_hijau': {'nama': 'Pisang Hijau', 'jumlah': 5}})
-        
-        test_cart_obj = TestCase.Cart()
-        print('aaaaaaa', test_cart_obj.get_cart())
-
-        test_cart_obj.hapus_product('Pisang Hijau')
-        self.assertEqual(None, TestCase.Cart.cart.get('pisang_hijau'))
-
-cart = {
-    'pisang_hijau': {
-        'nama' : 'Pisang Hijau',
-        'jumlah': 2
-    },
-    'apel_merah': {
-        'nama': 'Apel Merah',
-        'jumalah': 3
-    }
-}
